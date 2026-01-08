@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiikawa Index</title>
+</head>
+<body>
+    <h1>All Chiikawa Friends</h1>
+    <ul>
+        <% chiikawas.forEach(chiikawa => { %>
+        <li><%= chiikawa.name %></li>
+        <% }); %>
+    </ul>   
+</body>
+</html>
