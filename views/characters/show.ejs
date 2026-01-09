@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= character.name %></title>
+  </head>
+  <body>
+    <%- include('../partials/navbar') %>
+    <h1><%= character.name %></h1>
+    <img src="<%= character.chiikawaImage %>" alt="chiikawa_image">
+    <p><%= character.description %></p>
+    <div class="actions">
+    <form action="/characters/<%= character._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete <%= character.name %></button>
+    </form>
+    </div>
+    <a href="/characters/<%= character._id %>/edit">Edit <%= character.name %></a>
+    <a href="/characters">Back to Characters</a>
+  </body>
+</html>

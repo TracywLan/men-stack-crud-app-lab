@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New Chiikawa Friend</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <h1>Add a New Chiikawa Friend!</h1>
+    <form action="/characters" method="post">  
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div>
+            <label for="color">Color:</label>     
+            <input type="text" name="color" id="color" required />
+        </div>
+        <div>
+            <label for="description">Description:</label>  
+            <input type="text" name="description" id="description" required />
+        </div>
+        <div>
+            <label for="chiikawaImage">Image URL:</label>
+            <input type="url" name="chiikawaImage" id="chiikawaImage" required />
+        </div>
+        <button type="submit">Add Friend</button>
+    </form>
+    <a href="/characters">Back to Characters</a>
+</body>
+</html>

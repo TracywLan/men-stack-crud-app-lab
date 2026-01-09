@@ -6,11 +6,14 @@
     <title>Chiikawa Index</title>
 </head>
 <body>
+    <%- include('../partials/navbar') %>
     <h1>All Chiikawa Friends</h1>
+
     <ul>
-        <% chiikawas.forEach(chiikawa => { %>
-        <li><%= chiikawa.name %></li>
+        <% characters.forEach(character => { %>
+        <li><a href="/characters/<%= character._id %>"><%= character.name %></a></li>
         <% }); %>
     </ul>   
+    <a href="/characters/new">➕ Add New Chiikawa Friend</a>
 </body>
 </html>
